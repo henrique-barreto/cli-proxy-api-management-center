@@ -103,8 +103,6 @@
   },
   "nav": {
     "dashboard": "Панель",
-    "quick_start": "Быстрый старт",
-    "ai_providers": "Поставщики AI",
     "auth_files": "Файлы аутентификации",
     "oauth": "OAuth вход",
     "routing": "Маршрутизация",
@@ -122,8 +120,6 @@
   },
   "nav_meta": {
     "dashboard": "Обзор работы",
-    "quick_start": "Настройка APIKEY.FUN",
-    "ai_providers": "Маршрутизация моделей",
     "auth_files": "Файлы и учётные данные",
     "oauth": "Авторизация OAuth",
     "routing": "Уровни приоритета и отказоустойчивость",
@@ -145,7 +141,6 @@
     "hero_live": "Live",
     "hero_window_meta": "Скользящее окно {{window}} · интервалы по 10 минут",
     "hero_spark_label": "Объём запросов за последние {{window}}",
-    "cta_manage_providers": "Управлять провайдерами",
     "cta_inspect_logs": "Смотреть логи",
     "stats_aria": "Ключевые метрики",
     "success_rate": "Доля успешных",
@@ -916,7 +911,6 @@
     "kimi_ai_oauth_polling_error": "Не удалось проверить статус авторизации:",
     "kimi_oauth_title": "Kimi — китайский сайт (kimi.com)",
     "kimi_oauth_button": "Войти в Kimi China",
-    "kimi_sign_up_button": "Зарегистрироваться сейчас",
     "kimi_oauth_hint": "Только для аккаунтов kimi.com (Китай); для международных аккаунтов используйте вход kimi.ai.",
     "kimi_open_link": "Открыть ссылку",
     "kimi_copy_link": "Скопировать ссылку",
@@ -973,10 +967,6 @@
     "remote_access_disabled": "Этот способ входа недоступен при удалённом доступе. Подключитесь с localhost.",
     "kimi_oauth_name": "Kimi — Китай",
     "kimi_ai_oauth_name": "Kimi — международный",
-    "sponsor_site_china": "Китай",
-    "sponsor_site_international": "Международный",
-    "sponsor_kimi_caption": "Вход по коду устройства · аккаунты сайтов не связаны",
-    "sponsor_sign_up": "Регистрация",
     "method_device": "Код устройства",
     "method_browser": "Вход через браузер",
     "method_plugin": "Плагин",
@@ -999,7 +989,6 @@
     "login_proxy_clear": "Очистить",
     "login_proxy_invalid": "Недопустимый URL прокси. Укажите http, https, socks5 или socks5h с хостом (для socks5 нужен порт), без пути и параметров запроса.",
     "login_proxy_in_use": "Вход выполняется через прокси",
-    "sign_up_prompt": "Нет аккаунта?",
     "copied": "Скопировано"
   },
   "stats": {
@@ -1430,7 +1419,6 @@
         "network": {
           "title": "Сетевые настройки",
           "proxy_url": "URL прокси",
-          "proxy_url_sponsor_hint": "Нет подходящего прокси?",
           "request_retry": "Количество повторов запросов",
           "max_retry_credentials": "Максимум учётных данных для повторов",
           "max_retry_credentials_hint": "Оставьте пустым, чтобы не задавать поле. Значение 0 или отрицательное целое число позволяет перебрать все доступные учётные данные.",
@@ -1991,20 +1979,6 @@
     "version": "Версия интерфейса управления"
   },
   "providersPage": {
-    "behavior": {
-      "title": "Поведение, специфичное для провайдера",
-      "alphaSearch": "Включить Alpha Search",
-      "alphaSearchHint": "Разрешить использование этого ключа Codex для Alpha Search. Вышестоящий сервис должен поддерживать эту функцию.",
-      "codexCloaking": "Маскировка запросов Codex",
-      "codexCloakingHint": "Переопределить настройки заголовков идентификации официального Codex для этого API-ключа. Выбор значения по умолчанию удаляет переопределение для этих учётных данных; настройки, предназначенные только для OAuth, здесь не применяются.",
-      "useDefault": "Использовать настройки сервера по умолчанию",
-      "cloakingEnabled": "Включить маскировку",
-      "cloakingDisabled": "Отключить маскировку",
-      "rebuildMidSystemMessage": "Перестроить системные сообщения",
-      "rebuildMidSystemMessageHint": "Перемещать сообщения Claude с ролью system в поле system верхнего уровня.",
-      "supportPromptCacheKey": "Внедрять ключ кэша промпта",
-      "supportPromptCacheKeyHint": "Формировать и внедрять prompt_cache_key для совместимых запросов. Включайте только при поддержке этого поля вышестоящим сервисом."
-    },
     "modelOptions": {
       "displayName": "Отображаемое имя",
       "maxContextLength": "Размер контекста",
@@ -2075,205 +2049,12 @@
         "continue-and-cooldown": "Продолжить и охладить"
       }
     },
-    "header": {
-      "title": "AI Провайдеры",
-      "activeResources": "{{active}}/{{total}} активных",
-      "providerFamilies": "{{count}} семейств",
-      "updatedAt": "Обновлено {{time}}"
-    },
-    "actions": {
-      "refresh": "Обновить",
-      "syncing": "Синхронизация",
-      "new": "Создать",
-      "edit": "Изменить",
-      "view": "Просмотр",
-      "delete": "Удалить",
-      "cancel": "Отмена",
-      "save": "Сохранить",
-      "create": "Создать",
-      "enable": "Включить",
-      "disable": "Отключить"
-    },
-    "categories": {
-      "title": "Провайдеры",
-      "quickFill": "Быстрое заполнение",
-      "activeCount": "{{active}}/{{total}} активных"
-    },
-    "providerNames": {
-       "aiCodeMirror": "AIcodemirror",
-      "meta": "Muse (Meta)",
-      "gemini": "Gemini",
-      "interactions": "Interactions API",
-      "codex": "Codex",
-      "xai": "xAI",
-      "claude": "Claude",
-      "vertex": "Vertex",
-      "openaiCompatibility": "OpenAI-совместимый",
-      "apikeyFun": "APIKEY.FUN",
-      "fennoAI": "FennoAI",
-      "qiniuCloud": "Qiniu Cloud",
-      "kimi": "Kimi"
-    },
-    "table": {
-      "key": "Ключ",
-      "baseUrl": "Base URL",
-      "prefix": "Префикс",
-      "models": "Модели/Заголовки",
-      "status": "Статус",
-      "actions": "Действия",
-      "metrics": {
-        "models": "Модели",
-        "keys": "Ключи",
-        "headers": "Заголовки"
-      },
-      "websocketsTag": "WebSockets",
-      "cloakTag": "Cloak",
-      "cliProfileTag": "CLI-профиль",
-      "empty": "Нет ресурсов, нажмите \"Создать\".",
-      "filterPlaceholder": "Поиск по ключам, URL, префиксам…"
-    },
-    "sponsor": {
-      "protocolSummary": "Anthropic / OpenAI / Gemini / Codex API (Responses)",
-      "detailHint": "{{provider}} сохраняется в соответствующие конфигурации API key по протоколам; здесь они управляются вместе.",
-      "registerLink": "Зарегистрироваться",
-      "registerNow": "Зарегистрироваться сейчас",
-      "kimiPromo": "Новые пользователи получают API-квоту в размере 10% от первого успешного пополнения, максимум ¥1000. Предложение действует до 30 сентября.",
-      "dashboardLink": "Панель управления",
-      "emptyRegisterHint": "Конфигурации пока нет.",
-      "apiKeyHint": "Этот ключ записывается только в выбранную группу/протокол.",
-      "usageCheck": "Проверить квоту",
-      "usageChecking": "Проверка",
-      "usageRemaining": "Остаток: {{amount}} {{unit}}",
-      "usageBreakdown": "Использовано {{used}} / Лимит {{limit}}",
-      "usageStatus": "Статус: {{status}}",
-      "usageInvalid": "Недействительный ключ",
-      "usageEmpty": "Endpoint не вернул данные квоты.",
-      "usageApiKeyRequired": "Требуется API key",
-      "aggregationConflict": "Этот объединённый провайдер содержит несколько серверных конфигураций или ключей OpenAI. Чтобы избежать потери данных, измените исходную конфигурацию.",
-      "partialMutationWarning": "Операция завершилась ошибкой, но один или несколько протоколов могли обновиться. Последняя конфигурация загружена повторно; проверьте её перед повторной попыткой.",
-      "groupedKeysTitle": "Групповые ключи",
-      "groupedKeysHint": "Ключи платформы могут привязываться к группе при создании. Каждый групповой ключ здесь управляет одним протоколом, а модели загружаются только из этого протокола.",
-      "groupedKey": "Групповой ключ #{{index}}",
-      "addGroupedKey": "Добавить групповой ключ",
-      "removeGroupedKey": "Удалить групповой ключ",
-      "protocol": "Группа/протокол",
-      "protocolEndpoint": "Текущий endpoint протокола",
-      "urlMode": "{{provider}} URL",
-      "urlHint": "Все URL используют одинаковые правила API. При сохранении записывается только endpoint текущего группового протокола.",
-      "urlOptions": {
-         "aiCodeMirrorGlobal": "Глобальный маршрут с усиленной защитой",
-         "aiCodeMirrorDomestic": "Оптимизированный маршрут для материкового Китая",
-        "standard": "Обычный URL",
-        "direct": "Прямой URL",
-        "domestic": "Маршрут для материкового Китая",
-        "overseas": "Зарубежный маршрут",
-        "mainlandChina": "Материковый Китай (рекомендуется)",
-        "global": "Глобальный"
-      },
-      "urlOptionDescriptions": {
-         "aiCodeMirrorGlobal": "Маршрут с усиленной защитой для доступа по всему миру.",
-         "aiCodeMirrorDomestic": "Маршрут, оптимизированный для сетей материкового Китая.",
-        "domestic": "Для пользователей и нагрузок в материковом Китае; обычно дает меньшую задержку в сетях материкового Китая.",
-        "overseas": "Для зарубежных развертываний, трансграничного доступа или задач, которым нужны зарубежные модели.",
-        "mainlandChinaRecommended": "Рекомендуется для пользователей и нагрузок в сетях материкового Китая.",
-        "global": "Для пользователей и нагрузок во всех остальных регионах."
-      },
-      "modelsTitle": "Настройки моделей по протоколам",
-      "modelsHint": "Настраивайте allowlist моделей и алиасы отдельно для маршрутов Codex API, Anthropic, Gemini и OpenAI-compatible.",
-      "protocolModels": {
-        "codex": "Модели Codex API",
-        "anthropic": "Модели Anthropic",
-        "gemini": "Модели Gemini",
-        "openai": "Модели OpenAI-compatible"
-      },
-      "validation": {
-        "keyRequired": "Введите API key для каждого группового ключа.",
-        "protocolDuplicate": "Для каждого протокола можно добавить только один групповой ключ."
-      },
-      "openaiEntries": "Ключей OpenAI-compatible",
-      "codexEntries": "Ключей Codex API",
-      "anthropicEntries": "Ключей Anthropic",
-      "geminiEntries": "Ключей Gemini",
-      "protocols": {
-        "anthropic": "Anthropic",
-        "openai": "OpenAI-compatible",
-        "gemini": "Gemini",
-        "codexResponses": "Codex API (Responses)"
-      },
-      "double11": {
-        "badge": "Акция 11.11 · Ограничено",
-        "title": "{{provider}}: бонус к пополнению на 11.11",
-        "description": "Пополните баланс {{provider}} во время акции и получите дополнительно {{percent}}% от суммы пополнения.",
-        "bonus": "Бонус к пополнению",
-        "cta": "Участвовать",
-        "ctaAria": "Участвовать в акции 11.11 от {{provider}} (откроется в новой вкладке)"
-      }
-    },
-    "status": {
-      "active": "Активен",
-      "disabled": "Отключён",
-      "notSet": "Не задано",
-      "none": "Нет",
-      "notConfigured": "Не настроено",
-      "defaultSuffix": "(по умолчанию)"
-    },
-    "detail": {
-      "title": "Подробности",
-      "metadataTitle": "Метаданные",
-      "fields": {
-        "identifier": "Идентификатор",
-        "baseUrl": "Base URL",
-        "proxyUrl": "Proxy URL",
-        "prefix": "Префикс",
-        "models": "Моделей",
-        "headers": "Заголовков",
-        "authIndex": "Auth Index",
-        "excludedModels": "Исключённых моделей",
-        "apiKeyEntries": "API-ключей"
-      }
-    },
     "form": {
-      "createEyebrow": "Создать",
-      "editEyebrow": "Изменить",
-      "name": "Название",
-      "apiKey": "API-ключ",
-      "apiKeyCreatePlaceholder": "Введите API-ключ",
-      "apiKeyEditPlaceholder": "Оставьте пустым, чтобы не менять",
-      "baseUrl": "Base URL",
-      "proxyUrl": "Proxy URL",
-      "prefix": "Префикс",
-      "priority": "Приоритет",
-      "weight": "Вес планирования",
-      "weightHint": "По умолчанию 1 · ≤ 0 исключает запись · максимум 1 000 000",
-      "disabled": "Отключить эту запись",
-      "websockets": "Включить WebSockets",
-      "testModel": "Тестовая модель",
-      "testModelHint": "Используется только для проверки соединения; не сохраняется",
-      "testModelAutoWith": "Авто · {{name}}",
-      "testModelAutoEmpty": "Авто (модели ещё не добавлены)",
-      "testModelCustom": "{{name}} (своя)",
-      "modelsSection": "Пользовательские модели",
       "addModel": "Добавить модель",
-      "headersSection": "Заголовки запроса",
-      "addHeader": "Добавить заголовок",
-      "excludedSection": "Исключённые модели",
-      "excludedDisabledNote": "«*» означает, что провайдер отключён целиком — используйте переключатель «Отключено» выше.",
-      "cloakSection": "Настройки Cloak",
-      "cloakMode": "Режим",
-      "cloakStrict": "Строгий режим",
-      "cloakSensitiveWords": "Стоп-слова (по одному в строке)",
-      "apiKeyEntriesSection": "API-ключи",
-      "apiKeyEntry": "Ключ #{{index}}",
-      "addApiKeyEntry": "Добавить ключ",
-      "showApiKey": "Показать ключ API",
-      "hideApiKey": "Скрыть ключ API",
-      "disableCooling": "Отключить cooldown",
-      "disableCoolingHint": "Отключает окна охлаждения после ошибок только для этой записи",
       "modelImage": "Разрешить image endpoints",
       "modelImageHint": "Разрешить модель для /v1/images/generations и /v1/images/edits",
       "showAllEntries": "Показать все ({{count}})",
       "showFewerEntries": "Показать меньше",
-      "proxyBadge": "Прокси",
       "modelBadgeImage": "Image",
       "modelBadgeThinking": "Thinking",
       "thinkingConfig": "Возможности рассуждения",
@@ -2287,85 +2068,13 @@
         "xhigh": "Очень высокий",
         "max": "Максимальный",
         "auto": "Автоматический"
-      },
-      "cloakCacheUserId": "Кэшировать user_id",
-      "cloakCacheUserIdHint": "Переиспользовать Claude cloak user_id для каждого API-ключа",
-      "fingerprintProfile": "Отпечаток запроса",
-      "fingerprintProfileDefault": "По умолчанию (управляет клиент)",
-      "fingerprintProfileClaudeCodeCli": "Claude Code CLI",
-      "fingerprintProfileHint": "По умолчанию сохраняются prompt и заголовки клиента; можно включить отпечаток запросов Claude Code CLI.",
-      "validation": {
-        "nameRequired": "Название обязательно",
-        "apiKeyRequired": "Нужен хотя бы один API-ключ",
-        "baseUrlRequired": "Base URL обязателен",
-        "weightInteger": "Вес планирования должен быть целым числом",
-        "weightMax": "Вес планирования не может превышать {{max}}"
       }
-    },
-    "delete": {
-      "title": "Удалить ресурс",
-      "confirm": "Удалить {{name}}? Действие необратимо."
-    },
-    "toast": {
-      "created": "Создано",
-      "updated": "Обновлено",
-      "deleted": "Удалено",
-      "enabled": "Включено",
-      "disabled": "Отключено",
-      "toggleFailed": "Не удалось обновить статус"
     },
     "unsavedChanges": {
       "title": "Отменить несохранённые изменения?",
       "message": "В форме есть несохранённые изменения. При закрытии они будут потеряны.",
       "discard": "Отменить изменения",
       "keepEditing": "Продолжить"
-    },
-    "connectivity": {
-      "test": "Проверить",
-      "testAll": "Проверить все",
-      "success": "Доступно",
-      "baseUrlRequired": "Base URL обязателен",
-      "endpointInvalid": "Некорректный адрес",
-      "apiKeyRequired": "API-ключ обязателен",
-      "modelRequired": "Нужна тестовая модель",
-      "timeout": "Таймаут после {{seconds}} с",
-      "requestFailed": "Запрос не выполнен"
-    },
-    "discovery": {
-      "openButton": "Получить с конечной точки",
-      "searchPlaceholder": "Поиск моделей",
-      "reload": "Обновить",
-      "loading": "Загрузка моделей…",
-      "empty": "Конечная точка не вернула моделей",
-      "notLoaded": "Нажмите Обновить, чтобы загрузить модели",
-      "selectAll": "Выбрать результаты поиска",
-      "clearAll": "Снять выбор с результатов поиска",
-      "selectedCount": "{{selected}} / {{total}}",
-      "alreadyAdded": "Уже добавлено",
-      "close": "Закрыть",
-      "apply": "Применить ({{count}})",
-      "applyChanges": "Применить (+{{added}} / −{{removed}})",
-      "syncHint": "Отметьте нужные загруженные модели или снимите отметки, затем примените изменения. Модели вне этих результатов и настройки сохранённых моделей останутся без изменений. Пустой список в конфигурации использует настройки бэкенда по умолчанию и не обязательно отключает все модели."
-    },
-    "toolbar": {
-      "sortBy": "Сортировка",
-      "sort": {
-        "name": "Имя",
-        "priority": "Приоритет",
-        "recentSuccess": "Недавние успехи",
-        "directionAsc": "По возрастанию",
-        "directionDesc": "По убыванию"
-      },
-      "filter": {
-        "allModels": "Все модели",
-        "selectedModels": "{{selected}}/{{total}} моделей",
-        "selectAll": "Выбрать все",
-        "clear": "Очистить",
-        "empty": "Модели ещё не настроены"
-      }
-    },
-    "modelCatalog": {
-      "notLoaded": "Не загружено"
     }
   },
   "claude_reset": {

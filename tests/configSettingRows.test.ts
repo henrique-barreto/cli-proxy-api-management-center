@@ -352,12 +352,12 @@ describe('row aside', () => {
       createElement(TextSetting, {
         fieldId: 'proxyUrl',
         label: 'Proxy URL',
-        aside: createElement('a', { href: 'https://example.test' }, 'Sponsor'),
+        aside: createElement('a', { href: 'https://example.test' }, 'More details'),
         value: '',
         onChange: noop,
       })
     );
-    expect(markup).toContain('<a href="https://example.test">Sponsor</a>');
+    expect(markup).toContain('<a href="https://example.test">More details</a>');
     // Not hidden, not in an InfoTip, not part of the input's description.
     expect(markup).not.toContain('visually-hidden');
     expect(infoTipsOf(markup)).toHaveLength(0);
@@ -371,7 +371,7 @@ describe('row aside', () => {
         fieldId: 'proxyUrl',
         label: 'Proxy URL',
         description: 'Explanation',
-        aside: createElement('a', { href: 'https://example.test' }, 'Sponsor'),
+        aside: createElement('a', { href: 'https://example.test' }, 'More details'),
         value: '',
         onChange: noop,
       })
@@ -379,7 +379,7 @@ describe('row aside', () => {
     const input = markup.match(/<input\b[^>]*>/)?.[0] ?? '';
     const hint = elementById(markup, attr(input, 'aria-describedby')!);
     expect(hint).toContain('Explanation');
-    expect(hint).not.toContain('Sponsor');
+    expect(hint).not.toContain('More details');
     expect(infoTipsOf(markup)).toHaveLength(1);
   });
 });

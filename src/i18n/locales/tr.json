@@ -103,8 +103,6 @@
   },
   "nav": {
     "dashboard": "Pano",
-    "quick_start": "Hızlı Başlangıç",
-    "ai_providers": "AI Sağlayıcıları",
     "auth_files": "Kimlik Dosyaları",
     "oauth": "OAuth Girişi",
     "routing": "Yönlendirme",
@@ -123,8 +121,6 @@
   },
   "nav_meta": {
     "dashboard": "İşletim Özeti",
-    "quick_start": "APIKEY.FUN Kurulumu",
-    "ai_providers": "Yukarı Akış Model Yönlendirmesi",
     "auth_files": "Kimlik Dosyaları ve Kimlik Bilgileri",
     "oauth": "OAuth Yetkilendirmesi",
     "routing": "Öncelik katmanları ve yük devretme",
@@ -146,7 +142,6 @@
     "hero_live": "Canlı",
     "hero_window_meta": "Kayan {{window}} Penceresi · 10 Dakikalık Dilimler",
     "hero_spark_label": "Son {{window}} İçindeki İstek Hacmi",
-    "cta_manage_providers": "Sağlayıcıları Yönet",
     "cta_inspect_logs": "Günlükleri İncele",
     "stats_aria": "Temel Ölçüler",
     "success_rate": "Başarı Oranı",
@@ -903,7 +898,6 @@
     "kimi_ai_oauth_polling_error": "Kimlik Doğrulama Durumu Kontrol Edilemedi:",
     "kimi_oauth_title": "Kimi Çin (kimi.com)",
     "kimi_oauth_button": "Kimi Çin Hesabına Giriş Yap",
-    "kimi_sign_up_button": "Hemen Kaydol",
     "kimi_oauth_hint": "Yalnızca kimi.com (Çin) Hesapları İçin; Uluslararası Hesaplar kimi.ai Girişini Kullanır.",
     "kimi_open_link": "Bağlantıyı Aç",
     "kimi_copy_link": "Bağlantıyı Kopyala",
@@ -960,10 +954,6 @@
     "remote_access_disabled": "Bu Giriş Yöntemi Uzak Erişim için Kullanılamaz. Lütfen localhost Üzerinden Eriş.",
     "kimi_oauth_name": "Kimi Çin",
     "kimi_ai_oauth_name": "Kimi Uluslararası",
-    "sponsor_site_china": "Çin",
-    "sponsor_site_international": "Uluslararası",
-    "sponsor_kimi_caption": "Aygıt Koduyla Giriş · Hesaplar Site Başına Ayrıdır",
-    "sponsor_sign_up": "Açık Platforma Katıl",
     "method_device": "Aygıt Kodu",
     "method_browser": "Tarayıcıyla Giriş",
     "method_plugin": "Eklenti",
@@ -986,7 +976,6 @@
     "login_proxy_clear": "Temizle",
     "login_proxy_invalid": "Geçersiz proxy URL'si. Bir ana bilgisayarla birlikte http, https, socks5 veya socks5h kullanın (socks5 için port gerekir); yol veya sorgu eklemeyin.",
     "login_proxy_in_use": "Giriş proxy üzerinden yapılıyor",
-    "sign_up_prompt": "Henüz Hesap Yok Mu?",
     "copied": "Kopyalandı"
   },
   "stats": {
@@ -1417,7 +1406,6 @@
         "network": {
           "title": "Ağ Yapılandırması",
           "proxy_url": "Proxy URL",
-          "proxy_url_sponsor_hint": "Uygun Proxy Yok Mu?",
           "request_retry": "İstek Yeniden Deneme Sayısı",
           "max_retry_credentials": "En Fazla Yeniden Deneme Kimlik Bilgisi",
           "max_retry_credentials_hint": "Ayarlanmamış Bırakmak için Boş Bırak. Kullanılabilir Tüm Kimlik Bilgilerini Denemek için 0 veya Negatif Tam Sayı Ayarla.",
@@ -1987,20 +1975,6 @@
     "version": "Yönetim Arayüzü Sürümü"
   },
   "providersPage": {
-    "behavior": {
-      "title": "Sağlayıcıya Özel Davranış",
-      "alphaSearch": "Alpha Search Etkinleştir",
-      "alphaSearchHint": "Bu Codex Anahtarının Alpha Search Sunmasına İzin Ver. Yukarı Akış Bunu Desteklemelidir.",
-      "codexCloaking": "Codex İstek Gizleme",
-      "codexCloakingHint": "Bu API Anahtarı için Resmi Codex Kimlik Üst Bilgilerini Geçersiz Kıl. Varsayılan, Kimlik Bilgisi Geçersiz Kılmasını Kaldırır. Yalnızca OAuth Ayarları Burada Uygulanmaz.",
-      "useDefault": "Arka Uç Varsayılanını Kullan",
-      "cloakingEnabled": "Gizlemeyi Etkinleştir",
-      "cloakingDisabled": "Gizlemeyi Devre Dışı Bırak",
-      "rebuildMidSystemMessage": "Sistem İletilerini Yeniden Kur",
-      "rebuildMidSystemMessageHint": "role system Olan Claude İletilerini Üst Düzey system Alanına Taşı.",
-      "supportPromptCacheKey": "İstem Önbellek Anahtarı Ekle",
-      "supportPromptCacheKeyHint": "Uyumlu İstekler için prompt_cache_key Türet ve Ekle. Yalnızca Yukarı Akış Bu Alanı Destekliyorsa Etkinleştir."
-    },
     "modelOptions": {
       "displayName": "Görünen Ad",
       "maxContextLength": "Bağlam Uzunluğu",
@@ -2071,205 +2045,12 @@
         "continue-and-cooldown": "Devam Et ve Soğut"
       }
     },
-    "header": {
-      "title": "AI Sağlayıcıları",
-      "activeResources": "{{active}} / {{total}} Aktif Kaynak",
-      "providerFamilies": "{{count}} Sağlayıcı Ailesi",
-      "updatedAt": "Güncellendi {{time}}"
-    },
-    "actions": {
-      "refresh": "Yenile",
-      "syncing": "Eşitleniyor",
-      "new": "Yeni",
-      "edit": "Düzenle",
-      "view": "Gör",
-      "delete": "Sil",
-      "cancel": "İptal",
-      "save": "Kaydet",
-      "create": "Oluştur",
-      "enable": "Etkinleştir",
-      "disable": "Devre Dışı Bırak"
-    },
-    "categories": {
-      "title": "Sağlayıcılar",
-      "quickFill": "Hızlı Doldur",
-      "activeCount": "{{active}} / {{total}} Aktif"
-    },
-    "providerNames": {
-       "aiCodeMirror": "AIcodemirror",
-      "meta": "Muse (Meta)",
-      "gemini": "Gemini",
-      "interactions": "Interactions API",
-      "codex": "Codex",
-      "xai": "xAI",
-      "claude": "Claude",
-      "vertex": "Vertex",
-      "openaiCompatibility": "OpenAI Uyumlu",
-      "apikeyFun": "APIKEY.FUN",
-      "fennoAI": "FennoAI",
-      "qiniuCloud": "Qiniu Cloud",
-      "kimi": "Kimi"
-    },
-    "table": {
-      "key": "Anahtar",
-      "baseUrl": "Temel URL",
-      "prefix": "Önek",
-      "models": "Modeller/Üst Bilgiler",
-      "status": "Durum",
-      "actions": "Eylemler",
-      "metrics": {
-        "models": "Modeller",
-        "keys": "Anahtarlar",
-        "headers": "Üst Bilgiler"
-      },
-      "websocketsTag": "WebSockets",
-      "cloakTag": "Cloak",
-      "cliProfileTag": "CLI Profili",
-      "empty": "Henüz Kaynak Yok. Eklemek için \"Yeni\" Seçeneğine Tıkla.",
-      "filterPlaceholder": "Anahtar, URL veya Önek Ara…"
-    },
-    "sponsor": {
-      "protocolSummary": "Anthropic / OpenAI / Gemini / Codex API (Responses)",
-      "detailHint": "{{provider}} Protokole Göre Eşleşen API Anahtarı Yapılandırmalarına Yazılır. Bu Görünüm Onları Birlikte Yönetir.",
-      "registerLink": "Buradan Kaydol",
-      "registerNow": "Hemen Kaydol",
-      "kimiPromo": "Yeni Kullanıcılar İlk Başarılı Yüklemelerinin %10'u Değerinde API Kredisi Alır. Üst Sınır ¥1000. Teklif 30 Eylül'de Biter.",
-      "dashboardLink": "Pano",
-      "emptyRegisterHint": "Henüz Yapılandırma Yok.",
-      "apiKeyHint": "Bu Anahtar Yalnızca Seçilen Grup/Protokol Yapılandırmasına Yazılır.",
-      "usageCheck": "Kullanımı Kontrol Et",
-      "usageChecking": "Kontrol Ediliyor",
-      "usageRemaining": "Kalan: {{amount}} {{unit}}",
-      "usageBreakdown": "Kullanılan {{used}} / Sınır {{limit}}",
-      "usageStatus": "Durum: {{status}}",
-      "usageInvalid": "Geçersiz Anahtar",
-      "usageEmpty": "Uç Nokta Kullanım Verisi Döndürmedi.",
-      "usageApiKeyRequired": "API Anahtarı Gerekli",
-      "aggregationConflict": "Bu Gruplanmış Sağlayıcı Birden Fazla Arka Uç Yapılandırması veya OpenAI Anahtarı İçeriyor. Veri Kaybını Önlemek için Kaynak Yapılandırmada Düzenle.",
-      "partialMutationWarning": "Bir veya Daha Fazla Protokol Güncellenmiş Olabilecekken İşlem Başarısız Oldu. En Son Yapılandırma Yeniden Yüklendi. Yeniden Denemeden Önce İncele.",
-      "groupedKeysTitle": "Gruplanmış Anahtarlar",
-      "groupedKeysHint": "Platform Anahtarları Oluşturulurken Bir Gruba Bağlanabilir. Buradaki Her Gruplanmış Anahtar Bir Protokolü Yönetir. Model Keşfi Yalnızca O Protokolü Kullanır.",
-      "groupedKey": "Gruplanmış Anahtar #{{index}}",
-      "addGroupedKey": "Gruplanmış Anahtar Ekle",
-      "removeGroupedKey": "Gruplanmış Anahtarı Kaldır",
-      "protocol": "Grup/Protokol",
-      "protocolEndpoint": "Geçerli Protokol Uç Noktası",
-      "urlMode": "{{provider}} URL'si",
-      "urlHint": "Tüm URL'ler Aynı API Kurallarını Kullanır. Kayıt Yalnızca Geçerli Gruplanmış Protokolün Uç Noktasını Yazar.",
-      "urlOptions": {
-         "aiCodeMirrorGlobal": "Yüksek Korumalı Küresel Rota",
-         "aiCodeMirrorDomestic": "Çin Ana Karası için Optimize Edilmiş Rota",
-        "standard": "Standart URL",
-        "direct": "Doğrudan URL",
-        "domestic": "Çin Ana Karası Rotası",
-        "overseas": "Yurt Dışı Rotası",
-        "mainlandChina": "Çin Ana Karası (Önerilen)",
-        "global": "Küresel"
-      },
-      "urlOptionDescriptions": {
-         "aiCodeMirrorGlobal": "Küresel erişim için yüksek korumalı bir rota.",
-         "aiCodeMirrorDomestic": "Çin ana karasındaki ağlar için optimize edilmiş bir rota.",
-        "domestic": "Çin Ana Karasındaki Kullanıcılar ve İş Yükleri için. Ana Kara Ağlarında Genellikle Daha Düşük Gecikme.",
-        "overseas": "Yurt Dışı Dağıtımlar, Sınır Ötesi Erişim veya Yurt Dışı Modeller Gerektiren İş Yükleri için.",
-        "mainlandChinaRecommended": "Çin Ana Karası Ağlarındaki Kullanıcılar ve İş Yükleri için Önerilir.",
-        "global": "Diğer Tüm Bölgelerdeki Kullanıcılar ve İş Yükleri için."
-      },
-      "modelsTitle": "Protokol Model Ayarları",
-      "modelsHint": "Codex API, Anthropic, Gemini ve OpenAI Uyumlu Rotalar için Model İzin Listelerini veya Takma Adları Ayrı Yapılandır.",
-      "protocolModels": {
-        "codex": "Codex API Modelleri",
-        "anthropic": "Anthropic Modelleri",
-        "gemini": "Gemini Modelleri",
-        "openai": "OpenAI Uyumlu Modeller"
-      },
-      "validation": {
-        "keyRequired": "Her Gruplanmış Anahtar için Bir API Anahtarı Gir.",
-        "protocolDuplicate": "Her Protokolün Yalnızca Bir Gruplanmış Anahtarı Olabilir."
-      },
-      "openaiEntries": "OpenAI Uyumlu Anahtarlar",
-      "codexEntries": "Codex API Anahtarları",
-      "anthropicEntries": "Anthropic Anahtarları",
-      "geminiEntries": "Gemini Anahtarları",
-      "protocols": {
-        "anthropic": "Anthropic",
-        "openai": "OpenAI Uyumlu",
-        "gemini": "Gemini",
-        "codexResponses": "Codex API (Responses)"
-      },
-      "double11": {
-        "badge": "11.11 · Sınırlı süre",
-        "title": "{{provider}} 11.11 Yükleme Bonusu",
-        "description": "Kampanya süresince {{provider}} hesabınıza yükleme yapın, yükleme tutarının %{{percent}} kadarını ek kredi olarak kazanın.",
-        "bonus": "Yükleme bonusu",
-        "cta": "Hemen katıl",
-        "ctaAria": "Hemen katıl: {{provider}} 11.11 yükleme kampanyası (yeni sekmede açılır)"
-      }
-    },
-    "status": {
-      "active": "Aktif",
-      "disabled": "Devre Dışı",
-      "notSet": "Ayarlanmadı",
-      "none": "Yok",
-      "notConfigured": "Yapılandırılmadı",
-      "defaultSuffix": "(Varsayılan)"
-    },
-    "detail": {
-      "title": "Ayrıntılar",
-      "metadataTitle": "Üst Veri",
-      "fields": {
-        "identifier": "Tanımlayıcı",
-        "baseUrl": "Temel URL",
-        "proxyUrl": "Proxy URL",
-        "prefix": "Önek",
-        "models": "Modeller",
-        "headers": "Üst Bilgiler",
-        "authIndex": "Auth Dizini",
-        "excludedModels": "Hariç Tutulan Modeller",
-        "apiKeyEntries": "API Anahtarı Girdileri"
-      }
-    },
     "form": {
-      "createEyebrow": "Yeni",
-      "editEyebrow": "Düzenle",
-      "name": "Ad",
-      "apiKey": "API Anahtarı",
-      "apiKeyCreatePlaceholder": "API Anahtarını Gir",
-      "apiKeyEditPlaceholder": "Değişmeden Tutmak için Boş Bırak",
-      "baseUrl": "Temel URL",
-      "proxyUrl": "Proxy URL",
-      "prefix": "Önek",
-      "priority": "Öncelik",
-      "weight": "Zamanlama Ağırlığı",
-      "weightHint": "Varsayılan 1 · ≤ 0 Hariç · Üst Sınır 1.000.000",
-      "disabled": "Bu Girdiyi Devre Dışı Bırak",
-      "websockets": "WebSockets Etkinleştir",
-      "testModel": "Test Modeli",
-      "testModelHint": "Yalnızca Bağlantı Testi için Kullanılır. Kaydedilmez",
-      "testModelAutoWith": "Otomatik · {{name}}",
-      "testModelAutoEmpty": "Otomatik (Henüz Model Eklenmedi)",
-      "testModelCustom": "{{name}} (Özel)",
-      "modelsSection": "Özel Modeller",
       "addModel": "Model Ekle",
-      "headersSection": "İstek Üst Bilgileri",
-      "addHeader": "Üst Bilgi Ekle",
-      "excludedSection": "Hariç Tutulan Modeller",
-      "excludedDisabledNote": "“*” Sağlayıcının Tümünün Devre Dışı Olduğu Anlamına Gelir. Bunun Yerine Yukarıdaki Devre Dışı Anahtarını Kullan.",
-      "cloakSection": "Cloak Ayarları",
-      "cloakMode": "Mod",
-      "cloakStrict": "Sıkı Mod",
-      "cloakSensitiveWords": "Hassas Sözcükler (Satır Başına Bir)",
-      "apiKeyEntriesSection": "API Anahtarı Girdileri",
-      "apiKeyEntry": "Anahtar #{{index}}",
-      "addApiKeyEntry": "Anahtar Girdisi Ekle",
-      "showApiKey": "API Anahtarını Göster",
-      "hideApiKey": "API Anahtarını Gizle",
-      "disableCooling": "Soğumayı Devre Dışı Bırak",
-      "disableCoolingHint": "Hata Soğuma Pencerelerini Yalnızca Bu Kimlik Bilgisi veya Sağlayıcı için Devre Dışı Bırak",
       "modelImage": "Görüntü Uç Noktalarına İzin Ver",
       "modelImageHint": "Bu Modelin /v1/images/generations ve /v1/images/edits Üzerinde Kullanılmasına İzin Ver",
       "showAllEntries": "Tümünü Göster ({{count}})",
       "showFewerEntries": "Daha Az Göster",
-      "proxyBadge": "Proxy",
       "modelBadgeImage": "Görüntü",
       "modelBadgeThinking": "Düşünme",
       "thinkingConfig": "Düşünme Yetenekleri",
@@ -2283,85 +2064,13 @@
         "xhigh": "Çok Yüksek",
         "max": "En Yüksek",
         "auto": "Otomatik"
-      },
-      "cloakCacheUserId": "user_id Önbelleğe Al",
-      "cloakCacheUserIdHint": "Claude Cloak user_id Değerini API Anahtarı Başına Yeniden Kullan",
-      "fingerprintProfile": "İstek Parmak İzi",
-      "fingerprintProfileDefault": "Varsayılan (Çağıran Sahibi)",
-      "fingerprintProfileClaudeCodeCli": "Claude Code CLI",
-      "fingerprintProfileHint": "Varsayılan Olarak Çağıranın İstemini ve Üst Bilgilerini Koru veya Claude Code CLI İstek Parmak İzine Geç.",
-      "validation": {
-        "nameRequired": "Ad Zorunlu",
-        "apiKeyRequired": "En Az Bir API Anahtarı Zorunlu",
-        "baseUrlRequired": "Temel URL Zorunlu",
-        "weightInteger": "Zamanlama Ağırlığı Tam Sayı Olmalıdır",
-        "weightMax": "Zamanlama Ağırlığı {{max}} Değerini Aşamaz"
       }
-    },
-    "delete": {
-      "title": "Kaynağı Sil",
-      "confirm": "{{name}} Silinsin Mi? Bu Eylem Geri Alınamaz."
-    },
-    "toast": {
-      "created": "Oluşturuldu",
-      "updated": "Güncellendi",
-      "deleted": "Silindi",
-      "enabled": "Etkinleştirildi",
-      "disabled": "Devre Dışı Bırakıldı",
-      "toggleFailed": "Durum Güncellenemedi"
     },
     "unsavedChanges": {
       "title": "Kaydedilmemiş Değişiklikler Atılsın Mı?",
       "message": "Bu Formda Kaydedilmemiş Düzenlemeler Var. Kapatmak Onları Atar.",
       "discard": "Değişiklikleri At",
       "keepEditing": "Düzenlemeye Devam Et"
-    },
-    "connectivity": {
-      "test": "Test",
-      "testAll": "Tümünü Test Et",
-      "success": "Erişilebilir",
-      "baseUrlRequired": "Temel URL Zorunlu",
-      "endpointInvalid": "Uç Nokta URL'si Geçersiz",
-      "apiKeyRequired": "API Anahtarı Zorunlu",
-      "modelRequired": "Test Modeli Zorunlu",
-      "timeout": "{{seconds}} sn Sonra Zaman Aşımı",
-      "requestFailed": "İstek Başarısız"
-    },
-    "discovery": {
-      "openButton": "Uç Noktadan Getir",
-      "searchPlaceholder": "Modelleri Ara",
-      "reload": "Yeniden Yükle",
-      "loading": "Modeller Yükleniyor…",
-      "empty": "Uç Nokta Hiçbir Model Döndürmedi",
-      "notLoaded": "Modelleri Getirmek için Yeniden Yükle Seçeneğine Tıkla",
-      "selectAll": "Arama Sonuçlarını Seç",
-      "clearAll": "Arama Sonuçlarının Seçimini Kaldır",
-      "selectedCount": "{{selected}} / {{total}}",
-      "alreadyAdded": "Zaten Eklendi",
-      "close": "Kapat",
-      "apply": "Uygula ({{count}})",
-      "applyChanges": "Uygula (+{{added}} / −{{removed}})",
-      "syncHint": "Getirilen modelleri seçin veya seçimlerini kaldırın, ardından uygulayın. Bu sonuçların dışındaki modeller ve korunan modellerin ayarları değişmeden kalır. Yapılandırılan liste boşsa arka ucun varsayılanları kullanılır; bu, tüm modellerin mutlaka devre dışı bırakıldığı anlamına gelmez."
-    },
-    "toolbar": {
-      "sortBy": "Sırala",
-      "sort": {
-        "name": "Ad",
-        "priority": "Öncelik",
-        "recentSuccess": "Son Başarı",
-        "directionAsc": "Artan",
-        "directionDesc": "Azalan"
-      },
-      "filter": {
-        "allModels": "Tüm Modeller",
-        "selectedModels": "{{selected}} / {{total}} Model",
-        "selectAll": "Tümünü Seç",
-        "clear": "Temizle",
-        "empty": "Henüz Yapılandırılmış Model Yok"
-      }
-    },
-    "modelCatalog": {
-      "notLoaded": "Yüklenmedi"
     }
   },
   "claude_reset": {

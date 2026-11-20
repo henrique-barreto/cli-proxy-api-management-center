@@ -172,7 +172,6 @@ describe('sensitive replacement editor', () => {
     const sources = [
       'src/components/providers/SensitiveReplacementEditor.tsx',
       'src/features/config/components/sections/SectionAdvanced.tsx',
-      'src/features/providers/sheets/forms/BaseProviderForm.tsx',
     ]
       .map((path) => readFileSync(path, 'utf8'))
       .join('\n');

@@ -2,8 +2,6 @@ import { afterEach, expect, test } from 'bun:test';
 import { apiClient } from '@/services/api/client';
 import { providersApi } from '@/services/api/providers';
 import { normalizeProviderGroups } from '@/services/api/transformers';
-import { buildProviderKeyConfig } from '@/features/providers/useProviderWorkbench';
-import type { ProviderEntryFormInput } from '@/features/providers/types';
 import type { ProviderKeyConfig } from '@/types';
 
 const words = { ' target ': '', ' ': '  ', literal: '$1' };
@@ -41,7 +39,7 @@ test('Claude cloak normalization preserves deletion, whitespace, RE2 syntax and 
   ).toEqual(row(rawCloak).cloak);
 });
 
-test('Claude form builder and API round trip replacements, unrelated edits and explicit clearing', async () => {
+test('Claude API round trips replacements, unrelated edits and explicit clearing', async () => {
   let stored: Record<string, unknown> = {
     name: 'fixture',
     keys: [{ 'api-key': 'fixture-key', cloak: rawCloak }],
@@ -51,28 +49,7 @@ test('Claude form builder and API round trip replacements, unrelated edits and e
     expect(path).toBe('/config/api-keys/claude');
     stored = structuredClone(groups[0]);
   }) as typeof apiClient.put;
-  const input = {
-    apiKey: '',
-    name: '',
-    prefix: '',
-    baseUrl: '',
-    proxyUrl: '',
-    headers: [],
-    models: [],
-    excludedModelsText: '',
-    disabled: false,
-    cloak: {
-      mode: '',
-      strictMode: false,
-      sensitiveWordsText: '',
-      cacheUserId: false,
-      sensitiveWordsReplace: words,
-      sensitivePatternsReplace: patterns,
-    },
-  } satisfies ProviderEntryFormInput;
-  const config = buildProviderKeyConfig('claude', input, row(rawCloak)) as ProviderKeyConfig;
-  expect(config.cloak?.sensitiveWordsReplace).toEqual(words);
-  expect(config.cloak?.sensitivePatternsReplace).toEqual(patterns);
+  const config = row(rawCloak);
   await providersApi.updateClaudeConfig(config.apiKey, undefined, config);
   const readBack = () => normalizeProviderGroups([stored])[0] as ProviderKeyConfig;
   expect(readBack().cloak).toMatchObject({

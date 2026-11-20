@@ -27,7 +27,7 @@ From everyday configuration to troubleshooting, keep the essentials close at han
 
 | Configure | Connect | Observe |
 | --- | --- | --- |
-| Edit settings visually or in YAML, with a diff before saving. | Manage provider keys, auth files, and OAuth flows. | Check instance status, provider quotas, and request logs. |
+| Edit settings visually or in YAML, with a diff before saving. | Manage auth files and OAuth flows. | Check instance status, provider quotas, and request logs. |
 
 **Single-file deployment** · **Responsive layout** · **Four UI languages**
 
@@ -72,7 +72,6 @@ Upgrade the backend first and back up `config.yaml`. The backend returns the v8 
 | --- | --- |
 | **Dashboard** | See connection status, server version, build date, and model availability at a glance. |
 | **Configuration** | Edit common settings and client keys visually, or use the YAML editor with search, highlighting, and a save diff preview. |
-| **AI providers** | Configure Gemini, Codex, Claude, Vertex, and OpenAI-compatible providers; manage keys, headers, proxies, and model mappings. |
 | **Auth files & OAuth** | Upload, download, and organize credentials; connect supported providers with OAuth or device flows; manage model aliases and exclusions. |
 | **Quotas** | Inspect quota and usage information for supported providers, including Claude, Antigravity, Codex, Kimi, and xAI/Grok. |
 | **Logs** | Follow logs with auto-refresh, search, hide management traffic, and download request error logs. |
@@ -149,7 +148,6 @@ Use a trusted device or dedicated browser profile. Enable remote management only
 - **Logs page missing:** enable “Logging to file” in Basic Settings.
 - **Feature unsupported:** check the backend version and whether the relevant endpoint is enabled. Some capabilities depend on backend support.
 - **Model list unavailable:** querying `/v1/models` requires at least one proxy API key.
-- **OpenAI provider test fails:** this test runs in the browser and depends on the provider's network reachability and CORS policy. Failure does not necessarily mean the backend cannot reach it.
 
 </details>
 

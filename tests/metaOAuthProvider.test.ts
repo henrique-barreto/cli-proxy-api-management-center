@@ -127,7 +127,6 @@ describe('Muse (Meta) provider and device OAuth', () => {
         expect(translations.auth_login[`meta_${suffix}`]).toBeTruthy();
       }
       expect(translations.auth_files.filter_meta).toBe('Muse (Meta)');
-      expect(translations.providersPage.providerNames.meta).toBe('Muse (Meta)');
       expect(translations.auth_login.device_code_label).toBeTruthy();
       expect(translations.auth_login.device_code_copy).toBeTruthy();
     }

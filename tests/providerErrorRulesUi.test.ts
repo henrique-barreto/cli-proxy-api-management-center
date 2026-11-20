@@ -4,9 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createInstance } from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import { ErrorRulesEditor } from '@/features/providers/sheets/forms/ErrorRulesEditor';
-import { RuntimePolicyEditor } from '@/features/providers/sheets/forms/RuntimePolicyEditor';
 import { readErrorRules, type ErrorRuleDraft } from '@/features/providers/errorRules';
-import { readRuntimePolicy } from '@/features/providers/runtimePolicy';
 import en from '@/i18n/locales/en.json';
 import zhCN from '@/i18n/locales/zh-CN.json';
 import zhTW from '@/i18n/locales/zh-TW.json';
@@ -77,59 +75,9 @@ describe('error-rule editor UI', () => {
     const regexField = [...html.matchAll(/<textarea\b[^>]*>/g)].map((m) => m[0])[1];
     expect(regexField).toContain(`aria-describedby="${hintId}"`);
   });
-  test('the rule-order note is visible by default and moves into the runtime policy InfoTip', () => {
-    const orderHint = en.providersPage.errorRules.hint;
-    expect(renderRows()).toContain(orderHint);
-    expect(
-      render(
-        createElement(ErrorRulesEditor, {
-          rules: rows,
-          onChange: () => {},
-          disabled: false,
-          showOrderHint: false,
-        })
-      )
-    ).not.toContain(orderHint);
-    const policy = render(
-      createElement(RuntimePolicyEditor, {
-        value: { ...readRuntimePolicy(), errorRules: rows, errorsMode: 'override' },
-        onChange: () => {},
-        disabled: false,
-      })
-    );
-    // Present once, as the hidden description behind the error-rules InfoTip.
-    expect(policy.split(orderHint)).toHaveLength(2);
-    expect(policy).toContain(
-      `${en.providersPage.runtimePolicy.errorsHint} <br/>${orderHint}</span>`
-    );
-    expect(policy).toContain('aria-label="More information about Request error rules"');
-  });
-  test('an empty override retains its add action and inherited mode hides rows', () => {
+  test('an empty override retains its add action', () => {
     expect(renderRows([])).toContain('No rules.');
     expect(renderRows([])).toContain('Add rule');
-    const policy = { ...readRuntimePolicy(), errorRules: rows };
-    const inherited = render(
-      createElement(RuntimePolicyEditor, { value: policy, onChange: () => {}, disabled: false })
-    );
-    expect(inherited).not.toContain('Add rule');
-    const overridden = render(
-      createElement(RuntimePolicyEditor, {
-        value: { ...policy, errorsMode: 'override' },
-        onChange: () => {},
-        disabled: false,
-      })
-    );
-    expect(overridden).toContain('Add rule');
-    const vertex = render(
-      createElement(RuntimePolicyEditor, {
-        value: { ...policy, errorsMode: 'override' },
-        onChange: () => {},
-        disabled: false,
-        supportsErrors: false,
-      })
-    );
-    expect(vertex).not.toContain('Add rule');
-    expect(vertex).not.toContain('Request error rules');
   });
   test('unrecognized imported actions are displayed safely instead of silently selected away', () => {
     const html = renderRows([{ ...rows[0], action: '<unknown>' }]);

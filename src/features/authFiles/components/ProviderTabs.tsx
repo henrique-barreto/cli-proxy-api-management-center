@@ -63,7 +63,6 @@ export function ProviderTabs({
               <span
                 className={styles.tabIconWrap}
                 style={
-                  // 与 AI 提供商界面一致：Kimi 图标底座随主题切换颜色
                   isThemeSurfaceIconProvider(type)
                     ? { background: getThemeSurfaceIconBackground(resolvedTheme) }
                     : undefined

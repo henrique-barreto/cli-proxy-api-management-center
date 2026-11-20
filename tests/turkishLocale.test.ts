@@ -20,10 +20,6 @@ const interpolationTokens = (value: string): string[] => value.match(/\{\{[^}]+\
 
 const ratios = [
   ['excluded_models.footer_count', 'excluded'],
-  ['providersPage.header.activeResources', 'active'],
-  ['providersPage.categories.activeCount', 'active'],
-  ['providersPage.discovery.selectedCount', 'selected'],
-  ['providersPage.toolbar.filter.selectedModels', 'selected'],
   ['claude_reset.count', 'left'],
 ] as const;
 

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, RouterProvider, createHashRouter } from 'react-router-dom';
+import { Outlet, RouterProvider, createHashRouter, replace } from 'react-router-dom';
 import { LoginPage } from '@/pages/LoginPage';
 import { NotificationContainer } from '@/components/common/NotificationContainer';
 import { ConfirmationModal } from '@/components/common/ConfirmationModal';
@@ -40,6 +40,7 @@ const router = createHashRouter([
     children: [
       ...devPreviewRoutes,
       { path: '/login', element: <LoginPage /> },
+      { path: '/ai-providers/*', loader: () => replace('/oauth') },
       {
         path: '/*',
         element: (

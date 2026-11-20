@@ -72,7 +72,7 @@ type SettingCopy = {
    */
   keepDescriptionVisible?: boolean;
   /**
-   * 标题下方常驻的附加内容，但不是对控件的说明（如代理 URL 的赞助链接）：
+   * 标题下方常驻的附加内容，但不是对控件的说明：
    * 原样可见、可被键盘访问，不进 InfoTip，也不进控件的 aria-describedby。
    */
   aside?: ReactNode;
